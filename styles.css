@@ -6,10 +6,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 #navbar {
-
     background-color: #ffffff;
     position: fixed;
     top: 0;
@@ -18,16 +18,18 @@ body {
     z-index: 10;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: top 0.3s;
+    display: flex;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
-
 
 #navbar a {
     display: block;
     color: #000;
     text-align: center;
-    padding: 15px;
+    padding: 10px; /* Adjusted padding for smaller screens */
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px; /* Adjusted font size for smaller screens */
+    flex: 1; /* Allow navbar items to grow and shrink as needed */
 }
 
 #navbar a:hover {
@@ -59,24 +61,24 @@ main {
     padding: 2em;
     margin-top: 70px;
 }
+
 #join {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 #join img {
     height: auto;
-    display: block; 
+    display: block;
     margin: 0 auto;
     width: 150px;
-    transition: background-color 0.3s, transform 0.3s; 
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #join:hover {
     background-color: transparent;
-    transform: translateY(-2px); 
+    transform: translateY(-2px);
 }
-
 
 .content-div {
     font-size: larger;
@@ -103,12 +105,11 @@ nav ul li a:hover {
     justify-content: center;
     gap: 20px;
     justify-items: center;
-
 }
 
 .member {
     text-align: center;
-    width: calc(25%-20px);
+    width: calc(25% - 20px); /* Ensures 4 items per row accounting for gap */
 }
 
 .image {
@@ -119,14 +120,12 @@ nav ul li a:hover {
     margin: 0 auto;
     background-color: #fff;
     border: 2px solid #ddd;
-
 }
 
 .member-info, a {
     margin-top: 10px;
     text-decoration: none;
     font-weight: 100;
-    
 }
 
 footer {
@@ -135,19 +134,92 @@ footer {
     padding: 1em;
     text-align: center;
 }
-.social-media{
+
+.social-media {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Ensure icons wrap to new lines if necessary */
     gap: 10px;
-    margin-top: 1opx;
+    margin-top: 10px;
     margin-bottom: 1em;
 }
+
 .social-media a {
     color: #fff;
     text-decoration: none;
     margin: 0 5px;
+    flex: 1 1 auto; /* Ensure icons are evenly spaced and wrap properly */
+    max-width: 64px; /* Ensure icons don't exceed their size */
+}
+
+.social-media a img {
+    width: 100%;
+    height: auto;
 }
 
 .social-media a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 1200px) {
+    .team-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #navbar a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #navbar a {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo {
+        width: 200px;
+    }
+
+    .content-div {
+        padding: 1em;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .social-media {
+        gap: 5px; /* Reduce gap between icons */
+    }
+
+    #navbar a {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .image {
+        width: 80px;
+        height: 80px;
+    }
+
+    #navbar a {
+        font-size: 9px;
+        padding: 4px;
+    }
 }
