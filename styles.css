@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 #navbar {
@@ -19,18 +19,18 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: top 0.3s;
     display: flex;
-    overflow-x: hidden; 
-    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    align-items: center; /* Center items vertically */
 }
 
 #navbar a {
     display: block;
     color: #000;
     text-align: center;
-    padding: 10px;
+    padding: 10px; /* Adjusted padding for smaller screens */
     text-decoration: none;
-    font-size: 16px; 
-    flex: 1; 
+    font-size: 16px; /* Adjusted font size for smaller screens */
+    flex: 1; /* Allow navbar items to grow and shrink as needed */
 }
 
 #navbar a:hover {
@@ -56,8 +56,8 @@ header .logo {
     margin-right: 20px;
     width: 300px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto; /* Center the logo */
+    margin-right: auto; /* Center the logo */
 }
 
 main {
@@ -91,6 +91,7 @@ main {
     margin-bottom: 1em;
     display: block;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .content-div h1,
@@ -112,31 +113,32 @@ nav ul li a:hover {
 
 .member {
     text-align: center;
-    width: calc(25% - 20px); 
+    width: calc(25% - 20px); /* Ensures 4 items per row accounting for gap */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center all child elements horizontally */
+    justify-content: center; /* Center all child elements vertically */
 }
 
 .image {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin: 0 auto;
+    margin-bottom: 10px; /* Add margin below image for spacing */
     background-color: #fff;
     border: 2px solid #ddd;
 }
 
 .member-info {
-    text-align: center;
+    text-align: center; /* Center the text within the member-info div */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
 
 .member-info p, .member-info a {
-    display: block;
+    display: inline; /* Display text inline */
     margin: 0;
     padding: 5px 0;
-    
 }
 
 footer {
@@ -149,7 +151,7 @@ footer {
 .social-media {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Ensure icons wrap to new lines if necessary */
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 1em;
@@ -159,16 +161,16 @@ footer {
     color: #fff;
     text-decoration: none;
     margin: 0 5px;
-    flex: 1 1 auto; 
-    max-width: 64px; 
+    flex: 1 1 auto; /* Ensure icons are evenly spaced and wrap properly */
+    max-width: 64px; /* Ensure icons don't exceed their size */
 }
 
 .social-media a img {
-    width: 100%;
+    width: 100px;
     height: auto;
 }
 
-.social-media a:hover {
+social-media a:hover {
     text-decoration: underline;
 }
 
@@ -182,6 +184,9 @@ footer {
         font-size: 14px;
         padding: 8px;
     }
+    .social-media {
+        gap: 50px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -192,6 +197,9 @@ footer {
     #navbar a {
         font-size: 12px;
         padding: 6px;
+    }
+    .social-media{
+        gap: 40px;
     }
 }
 
@@ -209,7 +217,12 @@ footer {
     }
 
     .social-media {
-        gap: 5px; /* Reduce gap between icons */
+        gap: 30px; /* Reduce gap between icons */
+    }
+
+    .social-media a img { 
+        width: 80px;
+
     }
 
     #navbar a {
@@ -223,10 +236,16 @@ footer {
         grid-template-columns: 1fr;
         gap: 10px;
     }
+    .social-media{
+        gap: 25px;
+    }
 
     .image {
         width: 80px;
         height: 80px;
+    }
+    .social-media a img {
+        width: 70px;
     }
 
     #navbar a {
@@ -234,3 +253,5 @@ footer {
         padding: 4px;
     }
 }
+
+
