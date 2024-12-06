@@ -1,0 +1,153 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/5425010.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#navbar {
+
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: top 0.3s;
+}
+
+
+#navbar a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #7993e8;
+    color: black;
+}
+
+header {
+    background-color: #8da7ff;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    margin-right: 20px;
+    width: 300px;
+    height: auto;
+}
+
+main {
+    padding: 2em;
+    margin-top: 70px;
+}
+#join {
+    display: flex;
+    justify-content: center; 
+}
+
+#join img {
+    height: auto;
+    display: block; 
+    margin: 0 auto;
+    width: 150px;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+#join:hover {
+    background-color: transparent;
+    transform: translateY(-2px); 
+}
+
+
+.content-div {
+    font-size: larger;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content-div h1,
+.content-div h1 {
+    margin-top: 0;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+    justify-items: center;
+
+}
+
+.member {
+    text-align: center;
+    width: calc(25%-20px);
+}
+
+.image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #ddd;
+
+}
+
+.member-info, a {
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 100;
+    
+}
+
+footer {
+    background-color: #8da7ff;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1opx;
+    margin-bottom: 1em;
+}
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
