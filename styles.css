@@ -19,18 +19,18 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: top 0.3s;
     display: flex;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    align-items: center; /* Center items vertically */
+    overflow-x: hidden; 
+    align-items: center;
 }
 
 #navbar a {
     display: block;
     color: #000;
     text-align: center;
-    padding: 10px; /* Adjusted padding for smaller screens */
+    padding: 10px;
     text-decoration: none;
-    font-size: 16px; /* Adjusted font size for smaller screens */
-    flex: 1; /* Allow navbar items to grow and shrink as needed */
+    font-size: 16px; 
+    flex: 1; 
 }
 
 #navbar a:hover {
@@ -56,8 +56,8 @@ header .logo {
     margin-right: 20px;
     width: 300px;
     height: auto;
-    margin-left: auto; /* Center the logo */
-    margin-right: auto; /* Center the logo */
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 main {
@@ -91,7 +91,7 @@ main {
     margin-bottom: 1em;
     display: block;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
 .content-div h1,
@@ -113,11 +113,11 @@ nav ul li a:hover {
 
 .member {
     text-align: center;
-    width: calc(25% - 20px); /* Ensures 4 items per row accounting for gap */
+    width: calc(25% - 20px); 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center all child elements horizontally */
-    justify-content: center; /* Center all child elements vertically */
+    align-items: center; 
+    justify-content: center;
 }
 
 .image {
@@ -125,22 +125,27 @@ nav ul li a:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 10px; /* Add margin below image for spacing */
+    margin-bottom: 10px; 
     background-color: #fff;
     border: 2px solid #ddd;
 }
 
 .member-info {
-    text-align: center; /* Center the text within the member-info div */
-    white-space: nowrap; /* Prevent text from wrapping */
+    text-align: center; 
+    white-space: nowrap; 
 }
 
 .member-info p, .member-info a {
-    display: inline; /* Display text inline */
+    display: inline; 
     margin: 0;
     padding: 5px 0;
 }
-
+.member-info a {
+    text-decoration: none;
+    color: inherit;
+}
+.member-info a:hover {
+    text-decoration: underline;
 footer {
     background-color: #8da7ff;
     color: #fff;
@@ -151,7 +156,7 @@ footer {
 .social-media {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensure icons wrap to new lines if necessary */
+    flex-wrap: wrap; 
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 1em;
@@ -161,8 +166,8 @@ footer {
     color: #fff;
     text-decoration: none;
     margin: 0 5px;
-    flex: 1 1 auto; /* Ensure icons are evenly spaced and wrap properly */
-    max-width: 64px; /* Ensure icons don't exceed their size */
+    flex: 1 1 auto; 
+    max-width: 64px; /
 }
 
 .social-media a img {
@@ -217,7 +222,7 @@ social-media a:hover {
     }
 
     .social-media {
-        gap: 30px; /* Reduce gap between icons */
+        gap: 30px; 
     }
 
     .social-media a img { 
